@@ -1,0 +1,125 @@
+html {
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	text-align: center;
+	background-color: #333;
+	color: #fff;
+	padding: 60px;
+}
+
+h1 {
+	margin: 0;
+	font-size: 36px;
+	font-weight: 800;
+}
+
+h2 {
+	text-align: center;
+}
+
+p {
+	text-align: justify;
+	font-weight: 400;
+	line-height: 28px;
+}
+
+nav {
+	background-color: #ddd;
+	padding: 10px;
+	text-align: center;
+}
+
+nav a {
+	color: #333;
+	text-decoration: none;
+	padding: 10px;
+	margin: 0 10px;
+	border-radius: 5px;
+	background-color: #fff;
+}
+
+nav a:hover {
+	background-color: #333;
+	color: #fff;
+}
+
+section {
+	width: 80%;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.scroll-down {
+	height: 50px;
+	position: relative;
+	display: block;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+ }
+ 
+ .scroll-down span {
+	font-size: 16px;
+	font-weight: 600;
+	color: #DC143C;
+	margin-bottom: 10px;
+	animation: bounce 5s ease-in-out infinite;
+ }
+
+ /* add shadow */
+.caution {
+	height: 50px;
+	position: relative;
+	display: block;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+
+}
+
+.caution .caution-emoji {
+	font-size: 16px;
+	font-weight: 600;
+	color: #DC143C;
+	margin-bottom: 10px;
+	animation: caution 1s ease-in-out infinite;
+}
+
+table {
+	width: 100%;
+	border: 1px solid;
+	border-collapse: collapse;
+}
+
+th, td {
+	text-align: center;
+	border: 1px solid;
+}
+ 
+ @keyframes bounce {
+	0% {
+	  transform: translateY(0);
+	
+	}
+	50% {
+	  transform: translateY(-10px);
+	  font-size: large;
+	}
+	100% {
+	transform: translateY(0);
+	font-size: normal;
+	}
+ }
+
+ @keyframes caution {
+	50% {
+		opacity: 0;
+	}
+ }
