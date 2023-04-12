@@ -3,7 +3,8 @@ html {
 }
 
 body {
-	background-color: rgba(254, 250, 224, 0.3);;
+	background-color: rgba(254, 250, 224, 0.4);
+	;
 	margin: 0;
 	padding: 0;
 }
@@ -78,17 +79,16 @@ section {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
- }
- 
- .scroll-down span {
+}
+
+.scroll-down span {
 	font-size: 16px;
 	font-weight: 600;
 	color: #DC143C;
 	margin-bottom: 10px;
 	animation: bounce 5s ease-in-out infinite;
- }
+}
 
- /* add shadow */
 .caution {
 	height: 50px;
 	position: relative;
@@ -113,32 +113,45 @@ table {
 	border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
 	text-align: center;
 	border: 1px solid;
 }
- 
- @keyframes bounce {
-	0% {
-	  transform: translateY(0);
-	
-	}
-	50% {
-	  transform: translateY(-10px);
-	  font-size: large;
-	}
-	100% {
-	transform: translateY(0);
-	font-size: normal;
-	}
- }
 
- @keyframes caution {
+th {
+	background-color: #e9edc9;
+}
+
+footer {
+	background-color: #faedcd;
+	padding: 5px;
+}
+
+@keyframes bounce {
+	0% {
+		transform: translateY(0);
+
+	}
+
+	50% {
+		transform: translateY(-10px);
+		font-size: large;
+	}
+
+	100% {
+		transform: translateY(0);
+		font-size: normal;
+	}
+}
+
+@keyframes caution {
 	50% {
 		opacity: 0;
 	}
- }
- .custom-button {
+}
+
+.custom-button {
 	width: 125px;
 	height: 40px;
 	border-radius: 5px;
@@ -150,17 +163,18 @@ th, td {
 	transition: all 0.3s ease;
 	position: relative;
 	display: inline-block;
-	 box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-	 7px 7px 20px 0px rgba(0,0,0,.1),
-	 4px 4px 5px 0px rgba(0,0,0,.1);
+	box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+		7px 7px 20px 0px rgba(0, 0, 0, .1),
+		4px 4px 5px 0px rgba(0, 0, 0, .1);
 	outline: none;
- }
+}
 
- .homeButton {
+.homeButton {
 	border: none;
 	color: #000;
- }
- .homeButton:after {
+}
+
+.homeButton:after {
 	position: absolute;
 	content: "";
 	width: 0;
@@ -170,20 +184,23 @@ th, td {
 	direction: rtl;
 	z-index: -1;
 	box-shadow:
-	 -7px -7px 20px 0px #fff9,
-	 -4px -4px 5px 0px #fff9,
-	 7px 7px 20px 0px #0002,
-	 4px 4px 5px 0px #0001;
+		-7px -7px 20px 0px #fff9,
+		-4px -4px 5px 0px #fff9,
+		7px 7px 20px 0px #0002,
+		4px 4px 5px 0px #0001;
 	transition: all 0.3s ease;
- }
- .homeButton:hover {
+}
+
+.homeButton:hover {
 	color: #ef233c;
- }
- .homeButton:hover:after {
+}
+
+.homeButton:hover:after {
 	left: auto;
 	right: 0;
 	width: 100%;
- } 
- .homeButton:active {
+}
+
+.homeButton:active {
 	top: 2px;
- } 
+}

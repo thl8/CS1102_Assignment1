@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="utf-8">
+
+<head>
+	<meta charset="utf-8">
 	<script src="scripts/home.js"></script>
 	<link rel="stylesheet" href="styles/home.css">
 	<title>Floating-Point Numbers in Computers</title>
-	<style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700;800&display=swap');</style>
-	<script 
-	<script>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700;800&display=swap');
+	</style>
+	<script <script>
 		var clickCount = 0;
 
 		function changeText() {
-  		var button = document.getElementById("changeButton");
-  
-  		clickCount++;
-  
-  		if (clickCount === 1) {
-    		button.innerHTML = "1.0110011C*2^3";
-  		} else if (clickCount === 2) {
-    		button.innerHTML = "10.110011C*2^2";
-  		} else if (clickCount === 3) {
-    		button.innerHTML = "101.10011C*2^1";
-  		} else {
-    		button.innerHTML = "Click Me!";
-    		clickCount = 0;
-  		}
-	}
+			var button = document.getElementById("changeButton");
+
+			clickCount++;
+
+			if (clickCount === 1) {
+				button.innerHTML = "1.0110011C*2^3";
+			} else if (clickCount === 2) {
+				button.innerHTML = "10.110011C*2^2";
+			} else if (clickCount === 3) {
+				button.innerHTML = "101.10011C*2^1";
+			} else {
+				button.innerHTML = "Click Me!";
+				clickCount = 0;
+			}
+		}
 	</script>
 </head>
+
 <body>
 	<header>
 		<h1>Floating-Point Numbers in Computers</h1>
@@ -37,32 +41,37 @@
 		<a href="aboutUs.html">About Us</a>
 	</nav>
 	<section>
-		<h2>How Computers Represent Floating-Point Numbers?&#128187;</h2>
-		<p>Have you ever wondered how floating-point numbers are shown in computers? We clearly know how computers represent integers, including negative and positive integers. However, it is impossible to apply those methods to representation of floating-point number. Can you explain how a computer displays floating-point numbers? </p>
+		<h2>How Do Computers Represent Floating-Point Numbers?&#128187;</h2>
+		<p>Have you ever wondered how floating-point numbers are shown in computers? We clearly know how computers
+			represent integers, including negative and positive integers. However, it is impossible to apply those methods
+			to representation of floating-point number. Can you explain how a computer displays floating-point numbers?
+		</p>
 		<div class="scroll-down">
 			<span class="text">Scroll down for more information!&#128071;</span>
 		</div>
 		<!-- add little animation for transition-->
 		<h2>What are Floating-Point Numbers?</h2>
-		<p>A floating-point number is defined as <em><strong>Fraction(F) * Radix(R) ^ Exponent (E)</strong></em>. Since computers use binary forms to represent them, so they are shown as <em><strong>F*2^E</strong></em>. There are 2 interpretation strategies: 32-bit and 64-bit single-precision. Number 0 cannot be expressed in normalized form. There are normalized form and de-normalized form due to normalized form constraints. </p>
+		<p>A floating-point number is defined as <em><strong>Fraction(F) * Radix(R) ^ Exponent (E)</strong></em>. Since
+			computers use binary forms to represent them, so they are shown as <em><strong>F*2^E</strong></em>. There are 2
+			interpretation strategies: 32-bit and 64-bit single-precision. Number 0 cannot be expressed in normalized form.
+			There are normalized form and de-normalized form due to normalized form constraints. </p>
 		<!--effect for caution-->
 		<div class="caution">
 			<span class="caution-emoji">&#9888;</span>
 			<span>BE CAUTION, due to finite bits, floating-point numbers may not represent preciously.</span>
 		</div>
-		<p>In this stage, you might have a question &#128588;, based on the previous description, then floating-point numbers may have a sea of expressions?</p>
+		<p>In this stage, you might have a question&#128588;, based on the previous description, then floating-point
+			numbers may have a sea of expressions?</p>
 
-		<!--effect for standout-->
+
 		<p>YES, YOU ARE RIGHT! </p>
 		<p>A floating-point number can have many expressions.</p>
-		<!--Button to change content-->
-			<button id="changeButton" class=" custom-button homeButton" onclick="changeText()">Click Me!</button> = 1011.0011C
-		
-		<h2>How Computers Handles Floating-Point Numbers?</h2>
-		<!--h3 for precision heading-->
-		<h3>32-bit single-precision</h3>
-		<p>A floating-point number is displayed by 1 sign bit (S), followed by 8 bits of E, and the remaining 23 bits of F. Sign bit can only be 0 for positive number and 1 for negative number.</p>
-		<!--Table color should match with text color-->
+		<button id="changeButton" class=" custom-button homeButton" onclick="changeText()">Click Me!</button> = 1011.0011C
+
+		<h2>How Do Computers Handles Floating-Point Numbers?</h2>
+		<h3><u>32-bit single-precision</u></h3>
+		<p>A floating-point number is displayed by 1 sign bit (S), followed by 8 bits of E, and the remaining 23 bits of
+			F. Sign bit can only be 0 for positive number and 1 for negative number.</p>
 		<h3>Normalized Form</h3>
 		<table>
 			<tr>
@@ -78,8 +87,10 @@
 		</table>
 		<ol>
 			<li>Sign bit = 0, therefore it is a positive number.</li>
-			<li>Exponent = 01111111. The real exponent is E minus 127. In this case, we first convert 01111111b into decimal form, which is 127. Then, real exponent would be 127 - 127 = 0 </li>
-			<li>Fraction = 10000000000000000000000. The real fraction would be 1.F. In this case, the real fraction = 1+1*2^(-1) = 1.5 </li>
+			<li>Exponent = 01111111. The real exponent is E minus 127. In this case, we first convert 01111111b into
+				decimal form, which is 127. Then, real exponent would be 127 - 127 = 0 </li>
+			<li>Fraction = 10000000000000000000000. The real fraction would be 1.F. In this case, the real fraction =
+				1+1*2^(-1) = 1.5 </li>
 			<li>Computer representation for 1.5*2^0. (1.5D)</li>
 		</ol>
 		<h3>De-normalized Form</h3>
@@ -98,12 +109,15 @@
 		<ol>
 			<li>Sign bit = 1, therefore it is a negative number.</li>
 			<li>Exponent = 0. The real exponent must be -126</li>
-			<li>Fraction = 11110000000000000000000. The real fraction would be 0.F. In this case, the real fraction = 1*2^(-1)+1*2^(-2)+1*2^(-3)+1*2^(-4) = 0.9375.</li>
+			<li>Fraction = 11110000000000000000000. The real fraction would be 0.F. In this case, the real fraction =
+				1*2^(-1)+1*2^(-2)+1*2^(-3)+1*2^(-4) = 0.9375.</li>
 			<li>Computer representation for -0.9375*2^-126. (-1.1020259539e-38D)</li>
 		</ol>
-		<a rel="noopener "href="https://www.h-schmidt.net/FloatConverter/IEEE754.html" target="_blank">32-bit single-precision calculator</a>
-		<h3>64-bit single-precision</h3>
-		<p>A floating-point number is displayed by 1 sign bit (S), followed by 11 bits of E, and the remaining 52 bits of F. Compared to 32-bit, 64-bit single precision could make floating-point numbers more precious.</p>
+		<a rel="noopener " href="https://www.h-schmidt.net/FloatConverter/IEEE754.html" target="_blank">32-bit
+			single-precision calculator</a>
+		<h3><u>64-bit single-precision</u></h3>
+		<p>A floating-point number is displayed by 1 sign bit (S), followed by 11 bits of E, and the remaining 52 bits of
+			F. Compared to 32-bit, 64-bit single precision could make floating-point numbers more precious.</p>
 		<h3>Normalized form</h3>
 		<table>
 			<tr>
@@ -118,9 +132,11 @@
 			</tr>
 		</table>
 		<ol>
-			<li>Sign bit = 0, therefore it is a positive number.  </li>
-			<li>Exponent = 01111 11111 1. The real exponent is E minus 1023. In this case, we first convert 01111111111b into decimal form, which is 1023. Then, real exponent would be 1023 - 1023 = -0 </li>
-			<li>Fraction=00000 00000 00000 00000 00000 00000 00000 00000 00000 00000 00. The real fraction would be 1.F. In this case, the real fraction = 1 </li>
+			<li>Sign bit = 0, therefore it is a positive number. </li>
+			<li>Exponent = 01111 11111 1. The real exponent is E minus 1023. In this case, we first convert 01111111111b
+				into decimal form, which is 1023. Then, real exponent would be 1023 - 1023 = -0 </li>
+			<li>Fraction=00000 00000 00000 00000 00000 00000 00000 00000 00000 00000 00. The real fraction would be 1.F. In
+				this case, the real fraction = 1 </li>
 			<li>Computer representation for 1*2^0. (1D)</li>
 		</ol>
 		<h3>De-normalized form</h3>
@@ -138,13 +154,18 @@
 		</table>
 		<ol>
 			<li>Sign bit = 1, therefore it is a negative number.</li>
-			<li>Exponent=0. The real exponent must be -1022.   </li>
-			<li>Fraction=10000 00000 00000 00000 00000 00001 00000 00000 00000 00000 01. The real fraction would be 0.F. In this case, the real fraction = 1*2^(-1)+ 1*2^(-30)+1*2^(-52) = 0.5.</li>
+			<li>Exponent=0. The real exponent must be -1022. </li>
+			<li>Fraction=10000 00000 00000 00000 00000 00001 00000 00000 00000 00000 01. The real fraction would be 0.F. In
+				this case, the real fraction = 1*2^(-1)+ 1*2^(-30)+1*2^(-52) = 0.5.</li>
 			<li>Computer representation for -0.5*2^-1022. (-1.11253693132586270022528594514E-308D)</li>
 		</ol>
-		<a rel="noopener"href="https://www.binaryconvert.com/convert_double.html" target="_blank">64-bit single-precision calculator</a>
-		<p>Looks like you have mastered the concept of floating-point numbers in computers, wanna <a href="quiz.html">test</a> youself?</p>
+		<a rel="noopener" href="https://www.binaryconvert.com/convert_double.html" target="_blank">64-bit single-precision
+			calculator</a>
+		<p>Looks like you have mastered the concept of floating-point numbers in computers, wanna <a
+				href="quiz.html">test</a> youself?</p>
 	</section>
-	<footer>CS1102 - Course Project - 2022/2023 Semester B, created by Chan Tin Wing, Hau Yi Shan, Ng Kai Chiu, Tang Hei Lok</footer>
+	<footer>CS1102 - Course Project - 2022/2023 Semester B, created by Chan Tin Wing, Hau Yi Shan, Ng Kai Chiu, Tang Hei
+		Lok</footer>
 </body>
+
 </html>
