@@ -11,12 +11,12 @@ function checkAnswer(questionType, questionNumber) {
 
   //get user answer base on question type
   //question type 1 = short answer question, type 2 = mc
-   if (questionType === 1) {
-   userAnswer = document.querySelector(`[name=${CSS.escape(questionNumber)}`).value.toString();
+  if (questionType === 1) {
+    userAnswer = document.querySelector(`[name=${CSS.escape(questionNumber)}`).value.toString();
 
- } else  if (questionType === 2) {
-   userAnswer = document.querySelector(`input[name=${CSS.escape(questionNumber)}]:checked`).value;
- }
+  } else if (questionType === 2) {
+    userAnswer = document.querySelector(`input[name=${CSS.escape(questionNumber)}]:checked`).value;
+  }
 
   if (userAnswer === correctAnswer[questionNumber - 1]) {
     feedback.innerHTML = "Correct!";
@@ -25,9 +25,8 @@ function checkAnswer(questionType, questionNumber) {
   } else {
     attempts[questionNumber - 1]++;
     if (attempts[questionNumber - 1] < 3) {
-      feedback.innerText = `Incorrect. You have ${
-        3 - attempts[questionNumber - 1]
-      } attempt(s) remaining.`;
+      feedback.innerText = `Incorrect. You have ${3 - attempts[questionNumber - 1]
+        } attempt(s) remaining.`;
       feedback.style.color = "red";
       event.preventDefault();
     }

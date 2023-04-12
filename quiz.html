@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <script src="scripts/quiz.js"></script>
-   <head><meta charset="utf-8">
-      <link rel="stylesheet" href="styles/home.css">
-      <link rel="stylesheet" href="styles/quiz.css">
-      <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700;800&display=swap');</style>
-      <title>Mini Quiz for Floating-Point Numbers</title>
-   </head>
-   <body>
-      <header>
-         <h1>Floating-Point Numbers in Computers</h1>
-      </header>
-      <nav id="navbar">
-         <a href="index.html">Home</a>
-         <a href="quiz.html">Quiz</a>
-         <a href="aboutUs.html">About Us</a>
-      </nav>
-      <section>
-         <h2>Mini Quiz</h2>
-         <p>Answer the following questions:</p>
-         <div class="container">
+
+<head>
+   <meta charset="utf-8">
+   <link rel="stylesheet" href="styles/home.css">
+   <link rel="stylesheet" href="styles/quiz.css">
+   <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700;800&display=swap');
+   </style>
+   <title>Mini Quiz for Floating-Point Numbers</title>
+</head>
+
+<body>
+   <header>
+      <h1>Floating-Point Numbers in Computers</h1>
+   </header>
+   <nav id="navbar">
+      <a href="index.html">Home</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="aboutUs.html">About Us</a>
+   </nav>
+   <section>
+      <h2>Mini Quiz</h2>
+      <p>Answer the following questions:</p>
+      <div class="container">
          <form>
             <h2>Question 1:</h2>
             <p>What are the interpretation strategies for the computer to represent floating-point numbers?</p>
             <ul>
                <li>
-            <input type="radio" id="q1-a" name="1" value="a">
-            <label for="q1-a">A) 32-bit & 64-bit single-precision </label>
-            <div class="check"></div>
+                  <input type="radio" id="q1-a" name="1" value="a">
+                  <label for="q1-a">A) 32-bit & 64-bit single-precision </label>
+                  <div class="check"></div>
                </li>
                <li>
                   <input type="radio" id="q1-b" name="1" value="b">
@@ -45,223 +50,225 @@
                   <div class="check"></div>
                </li>
                <br>
-            <input type="submit" value="Submit" onclick="checkAnswer(2, 1)">
-            <div id='1'> </div>
-            <br>
-         
-            <h2>Question 2:</h2>
-            <p>Which form can express the number ‘0’?</p>
-            <li>
-               <input type="radio" id="q2-a" name="2" value="a">
-               <label for="q2-a">A) Normalized form </label>
-               <div class="check"></div>
-            </li>
-            <li>
-               <input type="radio" id="q2-b" name="2" value="b">
-               <label for="q2-b">B) De-normalized form </label>
-               <div class="check"></div>
-            </li>
-            <input type="submit" value="Submit" onclick="checkAnswer(2, 2)">
-            <div id='2'> </div>
-            <br>
+               <input type="submit" value="Submit" onclick="checkAnswer(2, 1)">
+               <div id='1'> </div>
+               <br>
 
-            <h2>Question 3:</h2>
-            <p>What is the sign bit representing?</p>
-            <li>
-               <input type="radio" id="q3-a" name="3" value="a">
-               <label for="q3-a">A) S=1 is negative, S=0 is positive  </label>
-               <div class="check"></div>
-            </li>
-            <li>
-               <input type="radio" id="q3-b" name="3" value="b">
-               <label for="q3-b">B) S=1 is negative, S=0 is negative  </label>
-               <div class="check"></div>
-            </li>
-            <li>
-               <input type="radio" id="q3-c" name="3" value="c">
-            <label for="q3-c">C) S=1 is positive, S=0 is negative </label>
-            <div class="check"></div>
-            </li>
-            
-            <li>
-               <input type="radio" id="q3-d" name="3" value="d">
-            <label for="q3-d">D) S=1 is positive, S=0 is positive </label>
-            <div class="check"></div>
-            </li>
-            <input type="submit" value="Submit" onclick="checkAnswer(2, 3)">
-            <div id='3'> </div>
-            <br>
+               <h2>Question 2:</h2>
+               <p>Which form can express the number ‘0’?</p>
+               <li>
+                  <input type="radio" id="q2-a" name="2" value="a">
+                  <label for="q2-a">A) Normalized form </label>
+                  <div class="check"></div>
+               </li>
+               <li>
+                  <input type="radio" id="q2-b" name="2" value="b">
+                  <label for="q2-b">B) De-normalized form </label>
+                  <div class="check"></div>
+               </li>
+               <input type="submit" value="Submit" onclick="checkAnswer(2, 2)">
+               <div id='2'> </div>
+               <br>
 
-            <h2>Question 4:</h2>
-            <p>What is the distribution of sign, exponent and fraction in 32-bit single-precision? </p>
-            <li>
-               <input type="radio" id="q4-a" name="4" value="a">
-            <label for="q4-a">A) 3; 7; 22</label>
-            <div class="check"></div>
-            </li>
-            <li>
-               <input type="radio" id="q4-b" name="4" value="b">
-            <label for="q4-b">B) 1; 8; 23</label>
-            <div class="check"></div>
-            </li>
-            <li>
-               <input type="radio" id="q4-c" name="4" value="c">
-            <label for="q4-c">C) 1; 10; 21</label>
-            <div class="check"></div>
-            </li>
-            <li>
-               <input type="radio" id="q4-d" name="4" value="d">
-            <label for="q4-d">D) 3; 9; 20 </label>
-            <div class="check"></div>
-            </li>
-            
-            <input type="submit" value="Submit" onclick="checkAnswer(2, 4)">
-            <div id='4'> </div>
-            <br>
+               <h2>Question 3:</h2>
+               <p>What is the sign bit representing?</p>
+               <li>
+                  <input type="radio" id="q3-a" name="3" value="a">
+                  <label for="q3-a">A) S=1 is negative, S=0 is positive </label>
+                  <div class="check"></div>
+               </li>
+               <li>
+                  <input type="radio" id="q3-b" name="3" value="b">
+                  <label for="q3-b">B) S=1 is negative, S=0 is negative </label>
+                  <div class="check"></div>
+               </li>
+               <li>
+                  <input type="radio" id="q3-c" name="3" value="c">
+                  <label for="q3-c">C) S=1 is positive, S=0 is negative </label>
+                  <div class="check"></div>
+               </li>
+
+               <li>
+                  <input type="radio" id="q3-d" name="3" value="d">
+                  <label for="q3-d">D) S=1 is positive, S=0 is positive </label>
+                  <div class="check"></div>
+               </li>
+               <input type="submit" value="Submit" onclick="checkAnswer(2, 3)">
+               <div id='3'> </div>
+               <br>
+
+               <h2>Question 4:</h2>
+               <p>What is the distribution of sign, exponent and fraction in 32-bit single-precision? </p>
+               <li>
+                  <input type="radio" id="q4-a" name="4" value="a">
+                  <label for="q4-a">A) 3; 7; 22</label>
+                  <div class="check"></div>
+               </li>
+               <li>
+                  <input type="radio" id="q4-b" name="4" value="b">
+                  <label for="q4-b">B) 1; 8; 23</label>
+                  <div class="check"></div>
+               </li>
+               <li>
+                  <input type="radio" id="q4-c" name="4" value="c">
+                  <label for="q4-c">C) 1; 10; 21</label>
+                  <div class="check"></div>
+               </li>
+               <li>
+                  <input type="radio" id="q4-d" name="4" value="d">
+                  <label for="q4-d">D) 3; 9; 20 </label>
+                  <div class="check"></div>
+               </li>
+
+               <input type="submit" value="Submit" onclick="checkAnswer(2, 4)">
+               <div id='4'> </div>
+               <br>
 
 
-            <h2>Question 5:</h2>
-            <p>How to represent decimal number 1.1102 in 32-bit single-precision? (Try to use the 32-bit single-precision calculator)</p>
-            <li>
-               <input type="radio" id="q5-a" name="5" value="a">
-            <label for="q5-a">A) 1 01111111 00011100001101100001001 </label>
-            <div class="check"></div>
-            </li>
-            <li>
-               <input type="radio" id="q5-b" name="5" value="b">
-            <label for="q5-b">B) 0 01111111 00011100001101111111001  </label>
-            <div class="check"></div>
-            </li>
-            <li>
-               <input type="radio" id="q5-c" name="5" value="c">
-            <label for="q5-c">C) 0 01111111 00011100001101100001001  </label>
-            <div class="check"></div>
-            </li>
-            <li>
-               <input type="radio" id="q5-d" name="5" value="d">
-            <label for="q5-d">D) 1 01111111 00011111111101100001001</label>
-            <div class="check"></div>
-            </li>
-            
-            <input type="submit" value="Submit" onclick="checkAnswer(2, 5)">
-            <div id='5'> </div>
-            <br>
+               <h2>Question 5:</h2>
+               <p>How to represent decimal number 1.1102 in 32-bit single-precision? (Try to use the 32-bit
+                  single-precision calculator)</p>
+               <li>
+                  <input type="radio" id="q5-a" name="5" value="a">
+                  <label for="q5-a">A) 1 01111111 00011100001101100001001 </label>
+                  <div class="check"></div>
+               </li>
+               <li>
+                  <input type="radio" id="q5-b" name="5" value="b">
+                  <label for="q5-b">B) 0 01111111 00011100001101111111001 </label>
+                  <div class="check"></div>
+               </li>
+               <li>
+                  <input type="radio" id="q5-c" name="5" value="c">
+                  <label for="q5-c">C) 0 01111111 00011100001101100001001 </label>
+                  <div class="check"></div>
+               </li>
+               <li>
+                  <input type="radio" id="q5-d" name="5" value="d">
+                  <label for="q5-d">D) 1 01111111 00011111111101100001001</label>
+                  <div class="check"></div>
+               </li>
 
-            <h2>Question 6:</h2>
-            <p>In 32-bit normalized form, what is the range of E(Exponent) in decimal form? </p>
-            <li>
-               <input type="radio" id="q6-a" name="6" value="a">
-            <label for="q6-a">A) -126 to +127</label>
-            <div class="check"></div>
-            </li>
-            <li>
-               <input type="radio" id="q6-b" name="6" value="b">
-            <label for="q6-b">B) -126 to +126</label>
-            <div class="check"></div>
-            </li>
-            <li>
-               <input type="radio" id="q6-c" name="6" value="c">
-            <label for="q6-c">C) -127 to +127</label>
-            <div class="check"></div>
-            </li>
-            <li>
-               <input type="radio" id="q6-d" name="6" value="d">
-            <label for="q6-d">D) -120 to +120</label>
-            <div class="check"></div>
-            </li>
-            
-            <input type="submit" value="Submit" onclick="checkAnswer(2, 6)">
-            <div id='6'> </div>
-            <br>
+               <input type="submit" value="Submit" onclick="checkAnswer(2, 5)">
+               <div id='5'> </div>
+               <br>
 
-            <h2>Question 7:</h2>
-            <p>What is the distribution of sign, exponent and fraction in 32-bit single-precision?</p>
-            <li>
-               <input type="radio" id="q7-a" name="7" value="a">
-            <label for="q7-a">A) 1; 11; 52</label>
-            <div class="check"></div>
-            </li>
-            <li>
-               <input type="radio" id="q7-b" name="7" value="b">
-            <label for="q7-b">B) 2; 10; 52</label>
-            <div class="check"></div>
-            </li>
-            <li>
-               <input type="radio" id="q7-c" name="7" value="c">
-            <label for="q7-c">C) 3; 12; 49</label>
-            <div class="check"></div>
-            </li>
-            <li>
-               <input type="radio" id="q7-d" name="7" value="d">
-            <label for="q7-d">D) 4; 10; 50</label>
-            <div class="check"></div>
-            </li>
-            
-            <input type="submit" value="Submit" onclick="checkAnswer(2, 7)">
-            <div id='7'> </div>
-            <br>
+               <h2>Question 6:</h2>
+               <p>In 32-bit normalized form, what is the range of E(Exponent) in decimal form? </p>
+               <li>
+                  <input type="radio" id="q6-a" name="6" value="a">
+                  <label for="q6-a">A) -126 to +127</label>
+                  <div class="check"></div>
+               </li>
+               <li>
+                  <input type="radio" id="q6-b" name="6" value="b">
+                  <label for="q6-b">B) -126 to +126</label>
+                  <div class="check"></div>
+               </li>
+               <li>
+                  <input type="radio" id="q6-c" name="6" value="c">
+                  <label for="q6-c">C) -127 to +127</label>
+                  <div class="check"></div>
+               </li>
+               <li>
+                  <input type="radio" id="q6-d" name="6" value="d">
+                  <label for="q6-d">D) -120 to +120</label>
+                  <div class="check"></div>
+               </li>
 
-            <h2>Question 8:</h2>
-            <p>How to represent decimal number -1.2345 in 64-bit double-precision? (Try to use the 64-bit double-precision calculator) </p>
-            <li>
-               <input type="radio" id="q8-a" name="8" value="a">
-            <label for="q8-a">A) 0 01111111111 0000000000001000001100010010011011101001011110001101</label>
-            <div class="check"></div>
-            </li>
-            <li>
-               <input type="radio" id="q8-b" name="8" value="b">
-            <label for="q8-b">B) 1 01111111111 0011110000001000001100010010011011101001011110001101</label>
-            <div class="check"></div>
-            </li>
-            <li>
-               <input type="radio" id="q8-c" name="8" value="c">
-            <label for="q8-c">C) 0 00000000001 0011110000001000001100010010011011101001011110001101</label>
-            <div class="check"></div>
-            </li>
-            <li>
-               <input type="radio" id="q8-d" name="8" value="d">
-            <label for="q8-d">D) 1 01111111111 0011111111111000001100010010011011101001011110001101</label>
-            <div class="check"></div>
-            </li>
-            <input type="submit" value="Submit" onclick="checkAnswer(2, 8)">
-            <div id='8'> </div>
-            <br>
+               <input type="submit" value="Submit" onclick="checkAnswer(2, 6)">
+               <div id='6'> </div>
+               <br>
 
-            <h2>Question 9:</h2>
-            <p>In 64-bit normalized form, what is the range of E(Exponent) in decimal form?</p>
-            <li>
-               <input type="radio" id="q9-a" name="9" value="a">
-            <label for="q9-a">A) -1020 to +1021 </label>
-            <div class="check"></div>
-            </li>
-            <li>
-               <input type="radio" id="q9-b" name="9" value="b">
-            <label for="q9-b">B) -1021 to +1022 </label>
-            <div class="check"></div>
-            </li>
-            <li>
-               <input type="radio" id="q9-c" name="9" value="c">
-            <label for="q9-c">C) -1022 to +1023 </label>
-            <div class="check"></div>
-            </li>
-            <li>
-               <input type="radio" id="q9-d" name="9" value="d">
-            <label for="q9-d">D) 1023 to +1024 </label>
-            <div class="check"></div>
-            </li>
-            
-            <input type="submit" value="Submit" onclick="checkAnswer(2, 9)">
-            <div id='9'> </div>
-            <br>
+               <h2>Question 7:</h2>
+               <p>What is the distribution of sign, exponent and fraction in 32-bit single-precision?</p>
+               <li>
+                  <input type="radio" id="q7-a" name="7" value="a">
+                  <label for="q7-a">A) 1; 11; 52</label>
+                  <div class="check"></div>
+               </li>
+               <li>
+                  <input type="radio" id="q7-b" name="7" value="b">
+                  <label for="q7-b">B) 2; 10; 52</label>
+                  <div class="check"></div>
+               </li>
+               <li>
+                  <input type="radio" id="q7-c" name="7" value="c">
+                  <label for="q7-c">C) 3; 12; 49</label>
+                  <div class="check"></div>
+               </li>
+               <li>
+                  <input type="radio" id="q7-d" name="7" value="d">
+                  <label for="q7-d">D) 4; 10; 50</label>
+                  <div class="check"></div>
+               </li>
 
-            <h2>Question 10:</h2>
-            <p>Try to convert it into decimal form:</p>
-            <p>11000000 00011101 11001100 11001100 11001100 11001100 11001100 11001101</p>
-            <input type="text" id="q10" name="10">
-            <input type="submit" value="Submit" onclick="checkAnswer(1, 10)">
-            <div id='10'> </div>
-         </ul>
-            
+               <input type="submit" value="Submit" onclick="checkAnswer(2, 7)">
+               <div id='7'> </div>
+               <br>
+
+               <h2>Question 8:</h2>
+               <p>How to represent decimal number -1.2345 in 64-bit double-precision? (Try to use the 64-bit
+                  double-precision calculator) </p>
+               <li>
+                  <input type="radio" id="q8-a" name="8" value="a">
+                  <label for="q8-a">A) 0 01111111111 0000000000001000001100010010011011101001011110001101</label>
+                  <div class="check"></div>
+               </li>
+               <li>
+                  <input type="radio" id="q8-b" name="8" value="b">
+                  <label for="q8-b">B) 1 01111111111 0011110000001000001100010010011011101001011110001101</label>
+                  <div class="check"></div>
+               </li>
+               <li>
+                  <input type="radio" id="q8-c" name="8" value="c">
+                  <label for="q8-c">C) 0 00000000001 0011110000001000001100010010011011101001011110001101</label>
+                  <div class="check"></div>
+               </li>
+               <li>
+                  <input type="radio" id="q8-d" name="8" value="d">
+                  <label for="q8-d">D) 1 01111111111 0011111111111000001100010010011011101001011110001101</label>
+                  <div class="check"></div>
+               </li>
+               <input type="submit" value="Submit" onclick="checkAnswer(2, 8)">
+               <div id='8'> </div>
+               <br>
+
+               <h2>Question 9:</h2>
+               <p>In 64-bit normalized form, what is the range of E(Exponent) in decimal form?</p>
+               <li>
+                  <input type="radio" id="q9-a" name="9" value="a">
+                  <label for="q9-a">A) -1020 to +1021 </label>
+                  <div class="check"></div>
+               </li>
+               <li>
+                  <input type="radio" id="q9-b" name="9" value="b">
+                  <label for="q9-b">B) -1021 to +1022 </label>
+                  <div class="check"></div>
+               </li>
+               <li>
+                  <input type="radio" id="q9-c" name="9" value="c">
+                  <label for="q9-c">C) -1022 to +1023 </label>
+                  <div class="check"></div>
+               </li>
+               <li>
+                  <input type="radio" id="q9-d" name="9" value="d">
+                  <label for="q9-d">D) 1023 to +1024 </label>
+                  <div class="check"></div>
+               </li>
+
+               <input type="submit" value="Submit" onclick="checkAnswer(2, 9)">
+               <div id='9'> </div>
+               <br>
+
+               <h2>Question 10:</h2>
+               <p>Try to convert it into decimal form:</p>
+               <p>11000000 00011101 11001100 11001100 11001100 11001100 11001100 11001101</p>
+               <input type="text" id="q10" name="10">
+               <input type="submit" value="Submit" onclick="checkAnswer(1, 10)">
+               <div id='10'> </div>
+            </ul>
+
             <h2>Question 11:</h2>
             <p>Try to convert it into 64-bit double precision (type the answer without any space):</p>
             <p>3.9</p>
@@ -283,8 +290,10 @@
             <input type="submit" value="Submit" onclick="checkAnswer(1, 13)">
             <div id='13'> </div>
          </form>
-         </div>
-      </section>
-      <footer>CS1102 - Course Project - 2022/2023 Semester B, created by Chan Tin Wing, Hau Yi Shan, Ng Kai Chiu, Tang Hei Lok</footer>
-   </body>
+      </div>
+   </section>
+   <footer>CS1102 - Course Project - 2022/2023 Semester B, created by Chan Tin Wing, Hau Yi Shan, Ng Kai Chiu, Tang Hei
+      Lok</footer>
+</body>
+
 </html>
