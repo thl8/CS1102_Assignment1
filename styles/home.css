@@ -3,15 +3,21 @@ html {
 }
 
 body {
+	background-color: rgba(254, 250, 224, 0.3);;
 	margin: 0;
 	padding: 0;
 }
 
 header {
+	align-items: center;
 	text-align: center;
-	background-color: #333;
-	color: #fff;
-	padding: 60px;
+	justify-content: center;
+	background-color: #d4a373b7;
+	height: 40vh;
+	padding: 0 2em;
+	display: flex;
+	color: #212227;
+
 }
 
 h1 {
@@ -31,9 +37,19 @@ p {
 }
 
 nav {
-	background-color: #ddd;
+	background-color: #faedcd;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 	padding: 10px;
 	text-align: center;
+	position: sticky;
+	top: 0px;
+	z-index: 1;
+}
+
+.nav-sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
 }
 
 nav a {
@@ -42,12 +58,11 @@ nav a {
 	padding: 10px;
 	margin: 0 10px;
 	border-radius: 5px;
-	background-color: #fff;
 }
 
 nav a:hover {
-	background-color: #333;
-	color: #fff;
+	background-color: #e9edc9;
+	color: #2b2d42;
 }
 
 section {
@@ -58,7 +73,7 @@ section {
 
 .scroll-down {
 	height: 50px;
-	position: relative;
+
 	display: block;
 	align-items: center;
 	justify-content: center;
@@ -123,3 +138,52 @@ th, td {
 		opacity: 0;
 	}
  }
+ .custom-button {
+	width: 125px;
+	height: 40px;
+	border-radius: 5px;
+	padding: 10px 25px;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+	background-color: rgba(183, 183, 164, 0.5);
+	cursor: pointer;
+	transition: all 0.3s ease;
+	position: relative;
+	display: inline-block;
+	 box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+	 7px 7px 20px 0px rgba(0,0,0,.1),
+	 4px 4px 5px 0px rgba(0,0,0,.1);
+	outline: none;
+ }
+
+ .homeButton {
+	border: none;
+	color: #000;
+ }
+ .homeButton:after {
+	position: absolute;
+	content: "";
+	width: 0;
+	height: 100%;
+	top: 0;
+	left: 0;
+	direction: rtl;
+	z-index: -1;
+	box-shadow:
+	 -7px -7px 20px 0px #fff9,
+	 -4px -4px 5px 0px #fff9,
+	 7px 7px 20px 0px #0002,
+	 4px 4px 5px 0px #0001;
+	transition: all 0.3s ease;
+ }
+ .homeButton:hover {
+	color: #ef233c;
+ }
+ .homeButton:hover:after {
+	left: auto;
+	right: 0;
+	width: 100%;
+ } 
+ .homeButton:active {
+	top: 2px;
+ } 
